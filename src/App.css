@@ -39,6 +39,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* new styles */
+  width: 15rem;
+  margin: 0rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    width: 12rem;
+    margin: calc(4 / 2);
+  }
+}
+
+@media (max-width: 488px) {
+  .productContainer {
+    width: 18rem;
+  }
 }
 
 .productImg img {
@@ -82,6 +98,108 @@
 }
 
 .accessoriesImg img {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+/* Product Card Container */
+
+.containerSettings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ShopNav Design */
+
+.shopNavMain {
+  padding: 0.5rem;
+  border-top: 0.6px solid #5e6368;
+  border-bottom: 0.6px solid #5e6368;
+}
+
+.navLinks {
+  width: 30%;
+}
+
+.navLinks button {
+  border: none;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.navLinks h4 {
+  font-size: 1.05rem;
+}
+
+/* CategoryText Design */
+.categoryTextContainer {
+  text-align: center;
+}
+
+.categoryTextContainer p {
+  font-size: 1.2rem;
+  color: #5e6368;
+  font-weight: 400;
+}
+
+/* Cart Items Container */
+
+.cartItemsContainer {
+  padding-top: 3rem;
+  border-bottom: 0.6px solid #5e6368;
+  padding: 20px 0px;
+}
+
+.cartContainerHeader {
+  border-bottom: 0.6px solid #5e6368;
+}
+
+.cartItemsContainer h4 {
+  font-size: 1.2rem;
+  color: #5e6368;
+  font-weight: 400;
+}
+
+/* Single Cart Row Design */
+.cartRowMain {
+  margin-top: 2rem;
+}
+
+.cartItemImg {
+  border-radius: 0.8rem;
+}
+
+.removeBtn {
+  border: none;
+  background-color: #fff;
+}
+
+.customItemText {
+  font-size: 0.8rem;
+  color: #5e6368;
+}
+
+.cardFooterItemOne {
+  margin-bottom: 2rem;
+  border-bottom: 0.6px solid #5e6368;
+}
+
+.proceed {
+  border: none;
+  background-color: #feb9ba;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+
+/* Product Card Details */
+.productDetailsImg {
+  width: 100%;
+}
+
+.productDetailsImg img {
   width: 100%;
   border-radius: 1.5rem;
 }

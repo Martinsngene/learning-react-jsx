@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
 import Accessories from "./components/Accessories";
-import ProductCard from "./components/ProductCard";
+import CardFooter from "./components/CardFooter";
+import CartRowContainer from "./components/CartRowContainer";
+import CategoryText from "./components/CategoryText";
+import MyCartNav from "./components/MyCartNav";
+// import ProductCard from "./components/ProductCard";
+import ProductCardContainer from "./components/ProductCardContainer";
+import ProductDetailsCard from "./components/ProductDetailsCard";
+import ShopNav from "./components/ShopNav";
 
 // const Todo = ({ todo, index, completeTodo, removeTodo }) => {
 //   return (
@@ -96,18 +103,32 @@ import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <ProductCard
-            productName={"Motion Seamless Crop - Musk Pink"}
-            price={"30,000"}
-          />
+    <div>
+      <ShopNav />
+      <CategoryText />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <ProductCardContainer />
+          </div>
         </div>
+        <div className="row">
+          <div className="col-md-12">
+            <Accessories />
+          </div>
+        </div>
+        <ProductDetailsCard />
       </div>
-      <div className="row">
-        <div className="col-md-12">
-          <Accessories />
+      <MyCartNav />
+      <div className="container">
+        <CartRowContainer />
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-7"></div>
+          <div className="col-md-5">
+            <CardFooter />
+          </div>
         </div>
       </div>
     </div>
