@@ -1,14 +1,7 @@
 import React from "react";
 import "./App.css";
-import Accessories from "./components/Accessories";
-import CardFooter from "./components/CardFooter";
-import CartRowContainer from "./components/CartRowContainer";
-import CategoryText from "./components/CategoryText";
-import MyCartNav from "./components/MyCartNav";
-// import ProductCard from "./components/ProductCard";
-import ProductCardContainer from "./components/ProductCardContainer";
-import ProductDetailsCard from "./components/ProductDetailsCard";
-import ShopNav from "./components/ShopNav";
+
+import Card from "./components/Card";
 
 // const Todo = ({ todo, index, completeTodo, removeTodo }) => {
 //   return (
@@ -104,33 +97,10 @@ import ShopNav from "./components/ShopNav";
 function App() {
   return (
     <div>
-      <ShopNav />
-      <CategoryText />
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <ProductCardContainer />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <Accessories />
-          </div>
-        </div>
-        <ProductDetailsCard />
-      </div>
-      <MyCartNav />
-      <div className="container">
-        <CartRowContainer />
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-7"></div>
-          <div className="col-md-5">
-            <CardFooter />
-          </div>
-        </div>
-      </div>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
