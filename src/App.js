@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import SearchBar from "./easydoc-business-components/SearchBar";
+import Card from "./components/Card";
 
 function App() {
+  const [name, setName] = useState("");
+
+  const changeName = (name) => {
+    setName(name);
+  };
   return (
     <div>
-      <SearchBar />
+      <button
+        className="btn btn-success"
+        onClick={() => changeName("Sopulu Ngene")}
+      >
+        click me 1
+      </button>
+      <Card
+        name={name}
+        title={"DevOps Engineer"}
+        changeMe={() => changeName("Martins Ngene")}
+      />
     </div>
   );
 }

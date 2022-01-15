@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() {
+function Card({ name, title, changeMe }) {
   return (
     <div>
       <div className="card">
@@ -11,10 +11,15 @@ function Card() {
         />
         <div className="container">
           <h4>
-            <b>John Doe</b>
+            <b>{name}</b>
           </h4>
-          <p>Architect & Engineer</p>
+          <p>{title}</p>
         </div>
+      </div>
+      <div>
+        <button className="btn btn-success" onClick={changeMe}>
+          click me 2
+        </button>
       </div>
     </div>
   );
