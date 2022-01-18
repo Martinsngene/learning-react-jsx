@@ -1,28 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Card from "./components/Card";
+import CardTestTwo from "./components/CardTestTwo";
 
 function App() {
-  const [name, setName] = useState("");
-
-  const changeName = (name) => {
-    setName(name);
-  };
   return (
     <div>
-      <button
-        className="btn btn-success"
-        onClick={() => changeName("Sopulu Ngene")}
-      >
-        click me 1
-      </button>
-      <Card
-        name={name}
-        title={"DevOps Engineer"}
-        changeMe={() => changeName("Martins Ngene")}
-      />
+      <CardTestTwo />
     </div>
   );
 }
-
 export default App;
