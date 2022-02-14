@@ -1,8 +1,8 @@
 import React from "react";
 
-function Card({ name, title, src }) {
+function Card({ name, title, src, onDelete }) {
   return (
-    <div>
+    <div className="flex items-center justify-center w-full">
       <div className="card">
         <img src={src} alt="Avatar" style={{ width: "100%" }} />
         <div className="container">
@@ -11,16 +11,11 @@ function Card({ name, title, src }) {
           </h4>
           <p>{title}</p>
         </div>
-        {/* <input type="text" onChange={onInputChange} value={name} /> */}
-      </div>
-      <div>
-        <button
-          className="btn btn-danger"
-          // onClick={changeMe}
-        >
+        <button className="btn btn-danger" onClick={onDelete}>
           delete
         </button>
       </div>
+      <div></div>
     </div>
   );
 }
