@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import CardTestTwo from "./components/CardTestTwo";
+import CustomModal from "./components/CustomModal";
 
 function App() {
+  const [toggleModal, setToggleModal] = useState(false);
   return (
     <div>
-      <CardTestTwo />
+      <button
+        onClick={() => setToggleModal(!toggleModal)}
+        className="bg-[#7b7be4]"
+      >
+        Open
+      </button>
+      <CustomModal btnToggle={toggleModal} />
     </div>
   );
 }
